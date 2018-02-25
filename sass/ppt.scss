@@ -1,0 +1,140 @@
+@charset "utf-8";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout";
+@import "compass/typography/text/ellipsis";  //超出提示省略号
+
+//ppt
+$config_bg: rgba(0,0,0,0.5);
+$config_bg_hover: rgba(0,0,0,0.8);
+.ppt_content{
+	position:relative;
+	background:#fff;
+	width: 100%;
+	height: 100%;
+	overflow:hidden;
+	@include user-select(none);
+	
+	.tips-info{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include translate(-50%, -50%);
+		color: #aaa;
+		font-size: 14px;
+		max-width: 80%;
+		z-index: 2;
+		display: none;
+	}
+	.ppt_config{
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 10px;
+		height: 28px;
+		line-height: 28px;
+		text-align: center;
+		z-index: 1;
+		i, span{
+			vertical-align: middle;
+			cursor: pointer;
+			color: #fff;
+		}
+		.ppt_progress{
+			.ppt_prev{
+				@include inline-block;
+				left: 0;
+				width: auto;
+			    margin-right: 20px;
+			    padding: 5px;
+			    font-size: 14px;
+			    background: $config_bg;
+			    @include border-radius(50%);
+			    @include transition (background 0.3s);
+			    &:hover{
+			    	background: $config_bg_hover;
+			    }
+			}
+			.ppt_progress_detail{
+				@include inline-block;
+				width: 80px;
+				text-align: center;
+				font-size: 0;
+				background:$config_bg;
+				@include border-radius(20px);
+				@include transition (background 0.3s);	
+				&:hover{
+			    	background: $config_bg_hover;
+			    }
+				.current{
+					@include inline-block;
+					font-size: 14px;
+					padding: 0 5px;
+				}
+				.p_center{
+					@include inline-block;
+					font-size: 14px;
+					padding: 0 5px;
+				}
+				.length{
+					@include inline-block;
+					font-size: 14px;
+					padding: 0 5px;
+				}
+			}
+			.ppt_next{
+				@include inline-block;
+				right:0;
+				width: auto;
+				margin-left: 20px;
+			    padding: 5px;
+			    font-size: 14px;
+			    background: $config_bg;
+			    @include border-radius(50%);
+			    @include transition (background 0.3s);
+			    &:hover{
+			    	background: $config_bg_hover;
+			    }
+			}
+		}
+		.full_ppt{
+			background: $config_bg;
+			position: absolute;
+			bottom: 0;
+			// margin-top: -7px;
+			padding: 5px;
+			right: 10px;
+			font-size: 16px;
+			@include border-radius(50%);
+			@include transition (background 0.3s);
+			&:hover{
+		    	background: $config_bg_hover;
+		    }
+		}
+	}
+	.ptt_image_lists{
+		width: auto;
+		height: 100%;
+		min-width: 100%;
+		position: relative;
+		float: left;
+		font-size: 0;
+		@include transition(all 0.3s);
+		.ppt_list{
+			display: inline-block;
+			width: auto;
+			height: 100%;
+		}
+	}
+}
+
+.ie-fullscreen{
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	width:100%!important;
+	height:100%!important;
+	z-index:2147483647;
+}

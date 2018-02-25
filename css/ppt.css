@@ -1,0 +1,263 @@
+/* line 5, D:/qianduan/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, D:/qianduan/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, D:/qianduan/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, D:/qianduan/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, D:/qianduan/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, D:/qianduan/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, D:/qianduan/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, D:/qianduan/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, D:/qianduan/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 10, ../sass/ppt.scss */
+.ppt_content {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/* line 18, ../sass/ppt.scss */
+.ppt_content .tips-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #aaa;
+  font-size: 14px;
+  max-width: 80%;
+  z-index: 2;
+  display: none;
+}
+/* line 29, ../sass/ppt.scss */
+.ppt_content .ppt_config {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  z-index: 1;
+}
+/* line 38, ../sass/ppt.scss */
+.ppt_content .ppt_config i, .ppt_content .ppt_config span {
+  vertical-align: middle;
+  cursor: pointer;
+  color: #fff;
+}
+/* line 44, ../sass/ppt.scss */
+.ppt_content .ppt_config .ppt_progress .ppt_prev {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  left: 0;
+  width: auto;
+  margin-right: 20px;
+  padding: 5px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+/* line 54, ../sass/ppt.scss */
+.ppt_content .ppt_config .ppt_progress .ppt_prev:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 58, ../sass/ppt.scss */
+.ppt_content .ppt_config .ppt_progress .ppt_progress_detail {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 80px;
+  text-align: center;
+  font-size: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+/* line 66, ../sass/ppt.scss */
+.ppt_content .ppt_config .ppt_progress .ppt_progress_detail:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 69, ../sass/ppt.scss */
+.ppt_content .ppt_config .ppt_progress .ppt_progress_detail .current {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 14px;
+  padding: 0 5px;
+}
+/* line 74, ../sass/ppt.scss */
+.ppt_content .ppt_config .ppt_progress .ppt_progress_detail .p_center {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 14px;
+  padding: 0 5px;
+}
+/* line 79, ../sass/ppt.scss */
+.ppt_content .ppt_config .ppt_progress .ppt_progress_detail .length {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 14px;
+  padding: 0 5px;
+}
+/* line 85, ../sass/ppt.scss */
+.ppt_content .ppt_config .ppt_progress .ppt_next {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  right: 0;
+  width: auto;
+  margin-left: 20px;
+  padding: 5px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+/* line 95, ../sass/ppt.scss */
+.ppt_content .ppt_config .ppt_progress .ppt_next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 100, ../sass/ppt.scss */
+.ppt_content .ppt_config .full_ppt {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  right: 10px;
+  font-size: 16px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+/* line 110, ../sass/ppt.scss */
+.ppt_content .ppt_config .full_ppt:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 115, ../sass/ppt.scss */
+.ppt_content .ptt_image_lists {
+  width: auto;
+  height: 100%;
+  min-width: 100%;
+  position: relative;
+  float: left;
+  font-size: 0;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 123, ../sass/ppt.scss */
+.ppt_content .ptt_image_lists .ppt_list {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+}
+
+/* line 131, ../sass/ppt.scss */
+.ie-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 2147483647;
+}

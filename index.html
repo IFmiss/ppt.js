@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PPT.js</title>
+	<link rel="stylesheet" href="css/ppt.css">
+	<link rel="stylesheet" href="icon-font/style.css">
+</head>
+<style>
+	body,html{
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		background: -webkit-linear-gradient(90deg,#FF3D3D,#FFBE48);
+		background: linear-gradient(90deg,#FF3D3D,#FFBE48);
+	}
+
+	.title{
+		font: 24px/1.5 weight;
+		color: #fff;
+		text-align: center;
+		margin: 20px 0;
+	}
+
+	.centerInfo{
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	
+	.github{
+		display: block;
+		width: 100%;
+		text-align: center;
+		color: #eee;
+	}
+</style>
+<body>
+	<div class="centerInfo">
+		<h3 class="title">基于jquery的ppt.js组件</h3>
+		<div class="testppt" style="margin: 0 auto"></div>
+		<h3 class="title">
+			<a class="github" href="https://github.com/IFmiss/ppt.js" target="_balck">github: https://github.com/IFmiss/ppt.js</a>
+		</h3>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/ppt.js"></script>
+<script>
+	$('.testppt').ppt({
+		width: 465,
+		height:261
+	})
+</script>
+</html>
