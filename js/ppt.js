@@ -138,7 +138,6 @@
 
       _this.setPPTImage = function(data) {
         _this.opt.imageUrl = data
-        console.log(_this.pptLength)
         _this.pptLength.text(data.length)
         _this.pptImageList.children().remove();
         for (var i = 0; i < data.length; i++) {
@@ -153,7 +152,6 @@
 
       _this.launchFullScreen = function(element) {
         if (_this.isIE910) {
-          console.log('启用IE全屏')
           this.launchFullScreenIE11L();
         } else {
           // alert(screenChange)
@@ -166,7 +164,6 @@
           } else if (element.msRequestFullscreen) {
             element.msRequestFullscreen()
           }
-          console.log('启用全屏 包括ie11')
           _this.launchFullScreenStyle(element)
         }
       }
@@ -204,7 +201,6 @@
 
       _this.exitFullscreen = function() {
         if (this.isIE910) {
-          console.log('启用IE9 IE10全屏')
             // this.isFull = true
           this.exitFullscreenIE11L();
         } else if (_this.browserV.indexOf('IE11') >= 0) {
@@ -232,6 +228,9 @@
       }
 
       _this.exitFullScreenStyle = function() {
+        if (document.msExitFullscreen) { 
+          document.msExitFullscreen();
+        }
         _this.updateFullScreenState(false)
         _this.setSize(_this.initExitScreenW, _this.initExitScreenH)
       }
@@ -240,7 +239,7 @@
       _this.screenChangeEvent = function(element) {
         var _this = this
         if (_this.browserV.indexOf('IE11') >= 0) {
-          document.onkeydown = function(e) {
+          document.onkeyup = function(e) {
             var keyNum = window.event ? e.keyCode : e.which
             if (keyNum === 27 && _this.isFull) {
               // ie退出全屏   这里针对的是IE11
@@ -248,7 +247,7 @@
             }
           }
         } else if (_this.isIE910) {
-          document.onkeydown = function(e) {
+          document.onkeyup = function(e) {
             var keyNum = window.event ? e.keyCode : e.which
             if (keyNum === 27 && _this.isFull) {
               // ie退出全屏   这里针对的是IE10  9
